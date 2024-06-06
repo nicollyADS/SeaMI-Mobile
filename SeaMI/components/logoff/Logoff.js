@@ -1,10 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, TouchableOpacity, Text } from 'react-native';
+import { Image } from 'react-native';
 
-export default function Logoff() {
+const Logoff = ({ fazerLogoff }) => {
   return (
     <View>
-      <Text>Logoff</Text>
+      <TouchableOpacity onPress={fazerLogoff}>
+        <Image source={require('../../assets/icon/sair.svg')} ></Image>
+        <Text>Sair</Text>
+      </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
+
+export default Logoff;

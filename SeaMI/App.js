@@ -1,10 +1,23 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+// No componente App
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import Login from './components/login/Login';
+import Menu from './components/menu/Menu';
 
 export default function App() {
+  const [logado, setLogado] = useState(false);
+
+  const logar = () => {
+    setLogado(true);
+  };
+
+  const fazerLogoff = () => {
+    setLogado(false);
+  };
+
   return (
-    <View>
-      <Text>App</Text>
+    <View style={{ flex: 1 }}>
+      {!logado ? <Login logar={logar} /> : <Menu fazerLogoff={fazerLogoff} />}
     </View>
-  )
+  );
 }
