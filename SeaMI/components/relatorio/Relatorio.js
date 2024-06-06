@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, Modal, TextInput } from 'react-
 import Error from '../../assets/images/error.png'
 import Erro from '../erro/Erro.js';
 import axios from 'axios';
+import { style } from '../criarRelatorio/style';
 
 const Relatorio = () => {
   const [relatorios, setRelatorios] = useState([]);
@@ -89,18 +90,18 @@ const Relatorio = () => {
   };
 
   const renderItem = ({ item }) => (
-    <View>
+    <View style={{ width: '20rem', marginBottom: '1rem', backgroundColor:"#fbfbfb", display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
       <View>
-        <Text>Relatorio</Text>
+        <Text style={{fontWeight: '600'}}>Relatorio</Text>
         <Text>Dias: {item.nome}</Text>
         <Text>Hábito: {item.descricao}</Text>
       </View>
       <View>
         <TouchableOpacity onPress={() => excluirRelatorio(item.id)}>
-          <Text>Excluir</Text>
+          <Text  style={{fontWeight: '600', marginTop: '0.5rem', fontSize: '1rem', color: 'red'}}>Excluir</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => mostrarRelatorioPorId(item.id)}>
-          <Text>Editar</Text>
+          <Text style={{fontWeight: '600', marginTop: '0.5rem', fontSize: '1rem'}}>Editar</Text>
         </TouchableOpacity>
       </View>
 
@@ -108,7 +109,7 @@ const Relatorio = () => {
   );
 
   return (
-    <View>
+    <View style={{ flex: 1 , backgroundColor:"#fbfbfb"}}>
       {erro ? (
         <Erro/>
       ) : (
@@ -126,28 +127,28 @@ const Relatorio = () => {
         }}
       >
         <View>
-          <View>
+          <View  style={style.container}>
           
-            <Text >Editar Relatório</Text>
-            <View>
-              <Text>Nome</Text>
-              <TextInput
+            <Text style={{fontWeight: '600', marginTop: '1rem', fontSize: '2rem'}}>Editar Relatório</Text>
+            <View style={style.inputLabel}>
+              <Text style={style.label}>Nome</Text>
+              <TextInput style={style.input}
                 placeholder="Nome"
                 value={nome}
                 onChangeText={setNome}
               />
             </View>
-            <View>
-              <Text>Descricao</Text>
-              <TextInput
+            <View style={style.inputLabel}>
+              <Text style={style.label}>Descricao</Text>
+              <TextInput style={style.input}
                 placeholder="Descrição"
                 value={descricao}
                 onChangeText={setDescricao}
               />
             </View>
     
-             <TouchableOpacity onPress={atualizarRelatorio}>
-              <Text>Atualizar</Text>
+             <TouchableOpacity style={style.button} onPress={atualizarRelatorio}>
+              <Text style={style.text}>Atualizar</Text>
             </TouchableOpacity>
           </View>
         </View>

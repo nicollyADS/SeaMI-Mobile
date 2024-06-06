@@ -6,8 +6,8 @@ import Sucesso from '../../assets/images/sucesso.png'
 const SucessoSenha = () => {
 
     return(
-        <View>
-            <Text>Senha alterada com sucesso!</Text>
+        <View style={style.sucessContainer}>
+            <Text style={style.sucessTittle}>Senha alterada com sucesso!</Text>
             <Image source={Sucesso} style={{ width: 100, height: 100 }} ></Image>
 
         </View>

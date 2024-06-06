@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import Erro from '../erro/Erro';
 import axios from 'axios';
+import { style } from '../criarRelatorio/style';
 
 const Amostra = () => {
   const [amostra, setAmostra] = useState([]);
@@ -24,8 +25,8 @@ const Amostra = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <View>
-      <Text>Amostra</Text>
+    <View style={{ width: '20rem', marginBottom: '1rem', backgroundColor:"#fbfbfb", display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+      <Text style={{fontWeight: '600'}}>Amostra</Text>
       <Text>Data: {item.dataCriacao}</Text>
       <Text>Ph: {item.ph}</Text>
       <Text>Poluentes Quimicos: {item.poluentesQuimicos}</Text>
@@ -34,7 +35,6 @@ const Amostra = () => {
       <Text>Oxigienio Dissolvido: {item.oxigenioDissolvido}</Text>
       <Text>temperatura: {item.temperatura}</Text>
       <Text>turbidez: {item.turbidez}</Text>
-      <Text></Text>
     </View>
   );
 
