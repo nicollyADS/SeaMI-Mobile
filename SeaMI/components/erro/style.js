@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 export const style = StyleSheet.create({
     errorContainer: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#05273A',
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
