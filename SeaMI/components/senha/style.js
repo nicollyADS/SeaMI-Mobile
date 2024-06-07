@@ -66,7 +66,7 @@ export const style = StyleSheet.create({
         width: '15rem',
         marginBottom: '7rem',
         fontWeight: '600',
-        color: '#008080',
+        color: '#00D2DF',
         textAlign: 'center'
     }
 });

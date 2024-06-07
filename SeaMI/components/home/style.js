@@ -14,6 +14,7 @@ export const style = StyleSheet.create({
     title: {
         fontSize: '2rem',
         fontWeight: '600',
+        marginBottom: '2rem',
         color: '#00D2DF',
     },
     title2: {
@@ -29,19 +30,19 @@ export const style = StyleSheet.create({
 
     },button: {
         display: 'flex',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        width: '20rem',
-        marginLeft: '1rem',
+        padding: '1rem',
         marginBottom: '4rem',
-
+        backgroundColor: '#00D2DF',
+        borderRadius: '1rem',
     },
     icon: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#008080',
+        backgroundColor: '#FBFBFB',
         padding: '1rem',
         borderRadius: '3rem',
         marginRight: '1rem',
@@ -49,10 +50,9 @@ export const style = StyleSheet.create({
     text: {
         fontSize: '1rem',
         width: '130px',
-        marginLeft: '1rem',
-        fontWeight: 'bold',
+        fontWeight: 'bolder',
         textAlign: 'center',
-        color: '#008080',
+        color: '#FBFBFB',
     }
 });
 

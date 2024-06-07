@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <View style={style.container}>
-      <Text style={style.tittle}>Olá, Bem Vindo!</Text>
+      <Text style={style.title}>Olá, Bem Vindo!</Text>
 
       <TouchableOpacity onPress={() => navigation.navigate('Amostra Água')} style={style.button}>
         <Text style={style.text}>Amostra Água</Text>
@@ -26,7 +26,7 @@ const Home = () => {
         <Text style={style.text}>Sobre nós</Text>
       </TouchableOpacity>
 
-      <Text style={{marginTop: '2rem', marginBottom: '6rem'}}>© 2024 SeaMI, Inc.</Text>
+      <Text style={{marginTop: '2rem',color: '#FBFBFB', marginBottom: '6rem'}}>© 2024 SeaMI, Inc.</Text>
     </View>
   );
 };

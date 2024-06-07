@@ -61,7 +61,7 @@ const CriarRelatorio = () => {
   };
 
   return (
-    <View>
+    <View style={{display: 'flex', alignItems: 'center'}}>
       <View>
         <Text style={style.label}>Nome</Text>
         <TextInput

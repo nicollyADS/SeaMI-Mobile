@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native'
 export const style = StyleSheet.create({
     container: {
         flex: 1,
+        padding: '1rem',
         backgroundColor: '#05273A',
         width: '100%',
         display: 'flex',
@@ -20,7 +21,8 @@ export const style = StyleSheet.create({
         fontSize: '1rem',
         fontWeight: '600',
         color: '#FBFBFB',
-        marginBottom: '0.5rem'
+        marginBottom: '0.5rem',
+        marginTop: '0.5rem',
     },
 });
 
