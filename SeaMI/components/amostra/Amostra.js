@@ -25,7 +25,7 @@ const Amostra = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <View style={{ width: '100%',  marginTop: '1rem', color:"#fbfbfb", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: "center", backgroundColor: "#05273A"}}>
+    <View style={{ width: '100%',  marginTop: '1rem', marginLeft: "1rem", color:"#fbfbfb", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: "flex-start", backgroundColor: "#05273A"}}>
       <Text style={{fontWeight: '600', color:"#fbfbfb",}}>Amostra</Text>
       <Text style={{ color:"#fbfbfb",}}>Data: {item.dataCriacao}</Text>
       <Text style={{ color:"#fbfbfb",}}>Ph: {item.ph}</Text>
