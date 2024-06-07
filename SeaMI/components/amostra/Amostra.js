@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import Erro from '../erro/Erro';
 import axios from 'axios';
+import { style } from '../criarRelatorio/style';
 
 const Amostra = () => {
   const [amostra, setAmostra] = useState([]);
@@ -24,22 +25,21 @@ const Amostra = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <View>
-      <Text>Amostra</Text>
-      <Text>Data: {item.dataCriacao}</Text>
-      <Text>Ph: {item.ph}</Text>
-      <Text>Poluentes Quimicos: {item.poluentesQuimicos}</Text>
-      <Text>Nutrientes: {item.nutrientes}</Text>
-      <Text>Plástico: {item.plastico}</Text>
-      <Text>Oxigienio Dissolvido: {item.oxigenioDissolvido}</Text>
-      <Text>temperatura: {item.temperatura}</Text>
-      <Text>turbidez: {item.turbidez}</Text>
-      <Text></Text>
+    <View style={{ width: '100%',  marginTop: '1rem', marginLeft: "1rem", color:"#fbfbfb", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: "flex-start", backgroundColor: "#05273A"}}>
+      <Text style={{fontWeight: '600', color:"#fbfbfb",}}>Amostra</Text>
+      <Text style={{ color:"#fbfbfb",}}>Data: {item.dataCriacao}</Text>
+      <Text style={{ color:"#fbfbfb",}}>Ph: {item.ph}</Text>
+      <Text style={{ color:"#fbfbfb",}}>Poluentes Quimicos: {item.poluentesQuimicos}</Text>
+      <Text style={{ color:"#fbfbfb",}}>Nutrientes: {item.nutrientes}</Text>
+      <Text style={{ color:"#fbfbfb",}}>Plástico: {item.plastico}</Text>
+      <Text style={{ color:"#fbfbfb",}}>Oxigienio Dissolvido: {item.oxigenioDissolvido}</Text>
+      <Text style={{ color:"#fbfbfb",}}>temperatura: {item.temperatura}</Text>
+      <Text style={{ color:"#fbfbfb",}}>turbidez: {item.turbidez}</Text>
     </View>
   );
 
   return (
-    <View>
+    <View style={{height: '100vh', backgroundColor: '#05273A'}}>
       {erro ? (
         <Erro/>
       ) : (

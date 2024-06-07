@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, TextInput, View, TouchableOpacity, Modal } from 'react-native';
 import EsqueciSenha from '../senha/EsqueciSenha'
+import { style } from './style';
 import axios from 'axios';
 
 const Login = ({ logar }) => {
@@ -39,26 +40,29 @@ const Login = ({ logar }) => {
   };
 
   return (
-    <View>
-      <Text>SeaMI</Text>
+    <View style={style.container}>
+      <View style={{ display:'flex', alignItems: "center", flexDirection: "row",marginBottom: '5rem', marginTop: '5rem',}}
+      ><Text style={style.title}>Sea</Text><Text style={style.title2}>MI</Text></View>
+      
 
-      <View>
-        <Text>Email</Text>
-        <TextInput value={email} onChangeText={setEmail} />
+      <View >
+        <Text style={style.text}>Email</Text>
+        <TextInput value={email} onChangeText={setEmail} style={style.input}/>
       </View>
 
       <View>
-        <Text>Senha</Text>
-        <TextInput value={senha} onChangeText={setSenha} secureTextEntry={true} />
+        <Text style={style.text}>Senha</Text>
+        <TextInput value={senha} onChangeText={setSenha} secureTextEntry={true} style={style.input}/>
       </View>
 
-      <TouchableOpacity onPress={handleLogin}>
-        <Text>Entrar</Text>
+      <TouchableOpacity style={style.button} onPress={handleLogin}>
+        <Text style={{ color: '#fbfbfb', fontSize: "1rem", fontWeight: '600' }}
+        >Entrar</Text>
       </TouchableOpacity>
 
-      <Text>{erroLogin}</Text>
+      <Text style={{ color: '#fbfbfb',}}>{erroLogin}</Text>
       <TouchableOpacity onPress={abrirModalEsqueciSenha}>
-        <Text>
+        <Text style={{ color: '#fbfbfb', fontSize: "0.9rem", fontWeight: '600', marginTop: '1rem', textDecorationLine: 'underline' }}>
           Esqueci minha senha
         </Text>
       </TouchableOpacity>

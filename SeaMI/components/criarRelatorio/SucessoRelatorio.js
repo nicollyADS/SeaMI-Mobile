@@ -1,12 +1,13 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Sucesso from '../../assets/images/sucesso.png'
+import { style } from './style'
 
 const SucessoRelatorio = () => {
 
     return(
-        <View>
-            <Text>Cadastro realizado com sucesso!</Text>
+        <View style={style.sucessContainer}>
+            <Text style={style.sucessTittle}>Cadastro realizado com sucesso!</Text>
             <Image source={Sucesso} style={{ width: 100, height: 100 }} ></Image>
         </View>
     )

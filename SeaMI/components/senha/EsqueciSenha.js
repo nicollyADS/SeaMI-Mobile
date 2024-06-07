@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Modal } from 'react-native';
 import SucessoSenha from './SucessoSenha';
-
+import { style } from './style';
 const EsqueciSenha = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -63,30 +63,34 @@ const EsqueciSenha = () => {
   };
 
   return (
-    <View>
-      <Text>SeaMI</Text>
-      <Text>Esqueci minha senha?</Text>
-      <View>
-        <Text>Informe o email para criar uma nova senha</Text>
+    <View style={style.container}>
+      <View style={{ display:'flex', alignItems: "center", flexDirection: "row",marginBottom: '5rem', marginTop: '5rem',}}
+      ><Text style={style.title}>Sea</Text><Text style={style.title2}>MI</Text></View>
+    
+      <Text style={{ color: '#fbfbfb', fontSize: "0.9rem", fontWeight: '600', marginTop: '1rem', textDecorationLine: 'underline', marginBottom: '1rem' }}>Esqueci minha senha?</Text>
+      <View style={style.inputContainer}>
+        <Text style={style.text}>Informe o email para criar uma nova senha</Text>
         <TextInput
+          style={style.input}
           value={email}
           onChangeText={text => setEmail(text)}
           inputMode="keyboard"
         />
       </View>
 
-      {erroEmail ? <Text>{erroEmail}</Text> : null}
-      <View>
-        <Text>Informe a nova senha. </Text>
+      {erroEmail ? <Text style={{ color: '#fbfbfb',}}>{erroEmail}</Text> : null}
+      <View style={style.inputContainer}>
+        <Text style={style.text}>Informe a nova senha. </Text>
         <TextInput
+          style={style.input}
           value={senha}
           onChangeText={text => setSenha(text)}
           inputMode="keyboard"
         />
       </View>
 
-      <TouchableOpacity onPress={() => informarEmail()}>
-        <Text>Alterar</Text>
+      <TouchableOpacity style={style.button} onPress={() => informarEmail()}>
+        <Text style={{color: "#fbfbfb"}}>Alterar</Text>
       </TouchableOpacity>
       <Modal
         visible={modalSucessoVisible}

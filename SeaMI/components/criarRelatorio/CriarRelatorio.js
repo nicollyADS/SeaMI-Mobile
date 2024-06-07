@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as yup from 'yup';
 import SucessoRelatorio from './SucessoRelatorio';
 import axios from 'axios';
+import { style } from './style';
 
 const schema = yup.object().shape({
   nome: yup.string().required('campo obrigatório.'),
@@ -60,30 +61,32 @@ const CriarRelatorio = () => {
   };
 
   return (
-    <View>
+    <View style={style.container}>
       <View>
-        <Text>Nome</Text>
+        <Text style={style.label}>Nome</Text>
         <TextInput
+          style={style.input}
           placeholder='Informe o nome do relatório'
           value={nome}
           onChangeText={setNome}
         />
-        {errors.nome && <Text style={{color:'cyan'}} >{errors.nome}</Text>}
+        {errors.nome && <Text style={{ color: '#fbfbfb',}} >{errors.nome}</Text>}
       </View>
 
       <View>
-        <Text>Descricao</Text>
+        <Text style={style.label}>Descricao</Text>
         <TextInput
+          style={style.inputD}
           placeholder='Faça uma descrição detalhada do relatório'
           value={descricao}
           onChangeText={setDescricao}
         />
-        {errors.descricao && <Text style={{color:'cyan'}} >{errors.descricao}</Text>}
+        {errors.descricao && <Text style={{ color: '#fbfbfb',}}>{errors.descricao}</Text>}
       </View>
 
 
-      <TouchableOpacity onPress={handleSubmit}>
-        <Text>Criar</Text>
+      <TouchableOpacity style={style.button} onPress={handleSubmit}>
+        <Text style={style.text}>Criar</Text>
       </TouchableOpacity>
 
       <Modal
@@ -92,21 +95,21 @@ const CriarRelatorio = () => {
           setModalVisible(!modalVisible);
         }}
       >
-        <View>
+        <View style={style.container}>
           <SucessoRelatorio/>
 
-          <TouchableOpacity onPress={() => {
+          <TouchableOpacity style={style.buttonI} onPress={() => {
             navigation.navigate("Home");
             setModalVisible(false)
           }}>
-            <Text>Voltar para a tela inicial</Text>
+            <Text style={style.text}>Voltar para a tela inicial</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {
+          <TouchableOpacity style={style.buttonA} onPress={() => {
             navigation.navigate("Relatórios");
             setModalVisible(false)
           }}>
-            <Text>Ir para meus relatórios</Text>
+            <Text style={style.text}>Ir para meus relatórios</Text>
           </TouchableOpacity>
 
         </View>
