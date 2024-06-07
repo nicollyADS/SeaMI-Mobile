@@ -78,7 +78,7 @@ const EsqueciSenha = () => {
         />
       </View>
 
-      {erroEmail ? <Text>{erroEmail}</Text> : null}
+      {erroEmail ? <Text style={{ color: '#fbfbfb',}}>{erroEmail}</Text> : null}
       <View style={style.inputContainer}>
         <Text style={style.text}>Informe a nova senha. </Text>
         <TextInput

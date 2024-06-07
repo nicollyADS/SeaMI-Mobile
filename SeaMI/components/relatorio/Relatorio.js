@@ -90,18 +90,18 @@ const Relatorio = () => {
   };
 
   const renderItem = ({ item }) => (
-    <View style={{ width: '100%',  marginBottom: '1rem', color:"#fbfbfb", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: "center", backgroundColor: "#05273A"}}>
-      <View style={{marginRight: "0.1rem"}}>
+    <View style={{ width: '100%',  marginTop: '1rem', color:"#fbfbfb", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: "center", backgroundColor: "#05273A"}}>
+      <View style={{height: "5rem", width: '70%',}}>
         <Text style={{fontWeight: '600', color:"#fbfbfb",}}>Relatorio</Text>
         <Text style={{ color:"#fbfbfb",}}>Dias: {item.nome}</Text>
         <Text style={{ color:"#fbfbfb",}}>Hábito: {item.descricao}</Text>
       </View>
       <View>
         <TouchableOpacity onPress={() => excluirRelatorio(item.id)}>
-          <Text  style={{fontWeight: '600', marginTop: '0.5rem', fontSize: '0.8rem', color: 'red'}}>Excluir</Text>
+          <Text  style={{fontWeight: 'bolder', marginTop: '0.5rem', fontSize: '0.8rem', color: 'red'}}>Excluir</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => mostrarRelatorioPorId(item.id)}>
-          <Text style={{fontWeight: '600', marginTop: '0.5rem', fontSize: '0.8rem'}}>Editar</Text>
+          <Text style={{fontWeight: 'bolder', marginTop: '0.5rem', fontSize: '0.8rem', color: '#00D2DF'} }>Editar</Text>
         </TouchableOpacity>
       </View>
 

@@ -60,7 +60,7 @@ const Login = ({ logar }) => {
         >Entrar</Text>
       </TouchableOpacity>
 
-      <Text>{erroLogin}</Text>
+      <Text style={{ color: '#fbfbfb',}}>{erroLogin}</Text>
       <TouchableOpacity onPress={abrirModalEsqueciSenha}>
         <Text style={{ color: '#fbfbfb', fontSize: "0.9rem", fontWeight: '600', marginTop: '1rem', textDecorationLine: 'underline' }}>
           Esqueci minha senha

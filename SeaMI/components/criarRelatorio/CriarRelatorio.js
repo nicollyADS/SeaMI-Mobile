@@ -61,7 +61,7 @@ const CriarRelatorio = () => {
   };
 
   return (
-    <View style={{display: 'flex', alignItems: 'center'}}>
+    <View style={style.container}>
       <View>
         <Text style={style.label}>Nome</Text>
         <TextInput
@@ -70,7 +70,7 @@ const CriarRelatorio = () => {
           value={nome}
           onChangeText={setNome}
         />
-        {errors.nome && <Text style={{color:'cyan'}} >{errors.nome}</Text>}
+        {errors.nome && <Text style={{ color: '#fbfbfb',}} >{errors.nome}</Text>}
       </View>
 
       <View>
@@ -81,7 +81,7 @@ const CriarRelatorio = () => {
           value={descricao}
           onChangeText={setDescricao}
         />
-        {errors.descricao && <Text style={{color:'cyan'}} >{errors.descricao}</Text>}
+        {errors.descricao && <Text style={{ color: '#fbfbfb',}}>{errors.descricao}</Text>}
       </View>
 
 

@@ -5,8 +5,10 @@ export const style = StyleSheet.create({
     container: {
         backgroundColor: '#05273A',
         display: 'flex',
+        paddingTop: '1rem',
         justifyContent: 'center',
         alignItems: 'center',
+        height: '100vh',
     },
     tittle: {
         fontSize: '2rem',
@@ -35,7 +37,7 @@ export const style = StyleSheet.create({
     label: {
         fontSize: '1rem',
         fontWeight: '600',
-        color: '#000',
+        color: '#fbfbfb',
         marginTop: '1rem',
     
     },
