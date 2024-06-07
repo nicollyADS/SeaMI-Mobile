@@ -35,17 +35,14 @@ export const style = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         padding: '1rem',
-        marginBottom: '4rem',
-        backgroundColor: '#00D2DF',
-        borderRadius: '1rem',
+        marginBottom: '1rem',
+
     },
     icon: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FBFBFB',
         padding: '1rem',
-        borderRadius: '3rem',
         marginRight: '1rem',
     },
     text: {
@@ -53,7 +50,7 @@ export const style = StyleSheet.create({
         width: '130px',
         fontWeight: 'bolder',
         textAlign: 'center',
-        color: '#FBFBFB',
+        color: '#00D2DF',
     }
 });
 
