@@ -93,8 +93,8 @@ const Relatorio = () => {
     <View style={{ width: '100%',  marginTop: '1rem', color:"#fbfbfb", display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: "center", backgroundColor: "#05273A"}}>
       <View style={{height: "5rem", width: '70%',}}>
         <Text style={{fontWeight: '600', color:"#fbfbfb",}}>Relatorio</Text>
-        <Text style={{ color:"#fbfbfb",}}>Dias: {item.nome}</Text>
-        <Text style={{ color:"#fbfbfb",}}>Hábito: {item.descricao}</Text>
+        <Text style={{ color:"#fbfbfb",}}>Nome: {item.nome}</Text>
+        <Text style={{ color:"#fbfbfb",}}>Descrição: {item.descricao}</Text>
       </View>
       <View>
         <TouchableOpacity onPress={() => excluirRelatorio(item.id)}>
